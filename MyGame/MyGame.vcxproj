@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{83d2316a-5e21-4f71-a48b-5fd42cba8383}</ProjectGuid>
+    <RootNamespace>MyGame</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(SolutionDir)External\SFML-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)External\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist "$(SolutionDir)External\SFML-3.0.0\bin" xcopy /y /d /q "$(SolutionDir)External\SFML-3.0.0\bin\sfml-*-d-3.dll" "$(OutDir)" &amp; ver &gt;nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(SolutionDir)External\SFML-3.0.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)External\SFML-3.0.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist "$(SolutionDir)External\SFML-3.0.0\bin" xcopy /y /d /q "$(SolutionDir)External\SFML-3.0.0\bin\sfml-*-3.dll" "$(OutDir)" &amp; ver &gt;nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Cart.cpp" />
+    <ClCompile Include="src\CashierScreen.cpp" />
+    <ClCompile Include="src\Money.cpp" />
+    <ClCompile Include="src\Payment.cpp" />
+    <ClCompile Include="src\Product.cpp" />
+    <ClCompile Include="src\ProductCatalog.cpp" />
+    <ClCompile Include="src\ProductLayout.cpp" />
+    <ClCompile Include="src\ProductsScreen.cpp" />
+    <ClCompile Include="src\ReceiptStore.cpp" />
+    <ClCompile Include="src\ReceiptsScreen.cpp" />
+    <ClCompile Include="src\StartScreen.cpp" />
+    <ClCompile Include="src\SupermarketMenuScreen.cpp" />
+    <ClCompile Include="src\TextureCache.cpp" />
+    <ClCompile Include="src\Transitions.cpp" />
+    <ClCompile Include="src\UiHelpers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\AppState.h" />
+    <ClInclude Include="src\Cart.h" />
+    <ClInclude Include="src\CashierScreen.h" />
+    <ClInclude Include="src\Money.h" />
+    <ClInclude Include="src\Payment.h" />
+    <ClInclude Include="src\Product.h" />
+    <ClInclude Include="src\ProductCatalog.h" />
+    <ClInclude Include="src\ProductCategory.h" />
+    <ClInclude Include="src\ProductLayout.h" />
+    <ClInclude Include="src\ProductsScreen.h" />
+    <ClInclude Include="src\ReceiptStore.h" />
+    <ClInclude Include="src\ReceiptsScreen.h" />
+    <ClInclude Include="src\StartScreen.h" />
+    <ClInclude Include="src\SupermarketMenuScreen.h" />
+    <ClInclude Include="src\TalkingMoment.h" />
+    <ClInclude Include="src\TextureCache.h" />
+    <ClInclude Include="src\Transitions.h" />
+    <ClInclude Include="src\UiHelpers.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

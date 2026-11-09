@@ -1,0 +1,45 @@
+1-Up Mushroom|9.99|PowerUp
+AcornShroom|4.50|PowerUp
+BeeShroom|6.75|PowerUp
+BellShroom|7.25|PowerUp
+Boomerang Flower|10.00|PowerUp
+Cherry Flower|4.99|PowerUp
+Cloud Flower|12.00|PowerUp
+Fire Flower|5.50|PowerUp
+Ghost Shroom|8.99|PowerUp
+Golden Flower|19.99|PowerUp
+Ice Flower|5.75|PowerUp
+Metal Shroom|14.00|PowerUp
+Mushroom|2.99|PowerUp
+Penguin Suit|11.25|PowerUp
+Propeller Shroom|7.75|PowerUp
+Rock Shroom|6.50|PowerUp
+Small Shroom|1.99|PowerUp
+Yellow Mushroom|3.25|PowerUp
+Bacon|3.49|BreakFast
+Egg|0.99|BreakFast
+Pankakes|4.99|BreakFast
+Smilley Bread|2.75|BreakFast
+Coke Monjito|3.99|Drinks
+Sunrise Tequilla|5.50|Drinks
+Coke|1.50|Drinks
+Fanta|1.50|Drinks
+Sprite|1.50|Drinks
+Apple|1.20|Fruits
+Berry|2.50|Fruits
+GrapeFruit|1.75|Fruits
+Watermelon|4.00|Fruits
+Butter|2.20|Ingredients
+Cheese|3.50|Ingredients
+Raw Steak|7.99|Ingredients
+Wheat|1.00|Ingredients
+Hamburguer|7.50|Meal
+Omurice|12.00|Meal
+Good Steak|18.99|Meal
+Suspicious Steak|25.00|Meal
+Cake|8.00|Sweets
+Candy|1.50|Sweets
+Chocolate Bar|2.50|Sweets
+Ice Cream|4.25|Sweets
+Popsicle|3.00|Sweets
+Pudding|3.75|Sweets
